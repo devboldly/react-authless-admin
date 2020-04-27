@@ -23,8 +23,7 @@ export const Logo = () => {
                 width: '24px',
                 marginRight: '10px',
                 userSelect: 'none',
-                filter:
-                  'drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(1px -1px 0 black)',
+                filter: `drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(1px -1px 0 black)`,
               }}
             />
           ) : (

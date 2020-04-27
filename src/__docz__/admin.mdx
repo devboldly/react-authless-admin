@@ -1,0 +1,15 @@
+---
+name: Admin Page
+route: /admin
+# menu: MenuName
+---
+
+# Admin Page
+
+This route (`/admin`) would normally take you to an admin page. But this is just a documentation site, so it doesn't have one. 🙈
+
+When Netlify CMS is installed, the page at this route will first authenticate the user, then take them to this hash route:
+
+<p><code>{`#${(typeof document !== 'undefined' && (document.URL.split('#').length > 1) ? document.URL.split('#')[1] : '')}`}</code></p>
+
+Learn more about Netlify CMS [here](https://www.netlifycms.org/).

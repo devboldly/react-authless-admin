@@ -1,0 +1,73 @@
+---
+name: useAdmin
+menu: Hooks
+route: /useAdmin
+---
+
+import { UseAdminExample } from '../__docz__/components/UseAdminExample';
+
+<h1>useAdmin</h1>
+
+## Description
+
+This hook can be used to enable or disable admin-only components on a static site that lacks user authentication.
+
+Using this, components such as an edit content button (that takes you to an admin page elsewhere) can be hidden from all non-admin users.
+
+This is accomplished via a [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) value. This means switching admin on will persist between browser sessions unless the user clears their history.
+
+## Usage
+
+```jsx
+const [isAdmin, setIsAdmin] = useAdmin();
+```
+
+Then, to toggle the admin state:
+
+```jsx
+setIsAdmin(!isAdmin);
+```
+
+This will set the value in local storage and synchronize all existing hooks.
+
+### Using A Passcode
+
+One way to use this hook is to create a passcode for admins and call `setIsAdmin(true)` when entered on an admin login page.
+
+See the [demo](/demo) for an example of this.
+
+### Role Support
+
+You can pass the hook the key name to use in [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
+
+For example:
+
+```jsx
+const [isEditor, setIsEditor] = useAdmin('editor');
+const [isDesigner, setIsDesigner] = useAdmin('designer');
+```
+
+This allows you to support multiple roles if needed. Those keys can then be provided to [AdminOnly](/AdminOnly), [NonAdminOnly](/NonAdminOnly), and [AdminToggle](/AdminToggle) via the `localStorageKeyName` prop.
+
+## Signature
+
+`useAdmin(localStorageKeyName?: string) => [boolean, (isAdmin: boolean) => void]`
+
+### Props
+
+| Prop | Type | Description |
+|------|------|-------------|
+| localStorageKeyName | `string` | Optional. The [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) key name for the admin boolean. Defaults to `react-authless-admin` |
+
+### Return
+
+The hook returns an array containing:
+
+| Index | Name | Type | Description |
+|-------|------|------|-------------|
+| 0 | isAdmin | `boolean` | `true` if admin is enabled, `false` otherwise. |
+| 1 | setIsAdmin | `(isAdmin: boolean) ⇒ void` | Setter that sets admin to enabled or disabled. Persists to local storage and synchronizes all hooks. |
+
+## Example
+
+See the [demo](/demo) for a full example.

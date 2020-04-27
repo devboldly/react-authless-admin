@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExampleComponent } from '../components/ExampleComponent';
+import { NetlifyCMSButton } from '../components/NetlifyCMSButton';
 
 // Learn how to write stories:
 // https://storybook.js.org/docs/basics/writing-stories/
@@ -9,12 +9,16 @@ import { ExampleComponent } from '../components/ExampleComponent';
 
 // The default export defines metadata that applies to the group.
 export default {
-  title: 'ExampleComponent',
-  component: ExampleComponent,
+  title: 'NetlifyCMSButton',
+  component: NetlifyCMSButton,
 };
 
 // The named exports define the stories
-export const ExampleComponentStory = () => <ExampleComponent />;
-ExampleComponentStory.story = {
-  name: 'ExampleComponent',
+export const NetlifyCMSButtonStory = () => (
+  <div>
+    When toggled, the Edit Content button will appear here: <NetlifyCMSButton collection="posts" entry="hello-world" />{' '}
+  </div>
+);
+NetlifyCMSButtonStory.story = {
+  name: 'NetlifyCMSButton',
 };

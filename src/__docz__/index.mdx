@@ -16,45 +16,87 @@ import githubSvg from '../__docz__/images/github.svg';
 	alignItems: 'center',
 }}>
   <div>
-    <h1>React Library Starter</h1>
+    <h1>React Authless Admin</h1>
   </div>
   <div>
-    <a href="https://github.com/devboldly/react-library-starter" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/devboldly/react-authless-admin/" target="_blank" rel="noopener noreferrer">
       <SvgIcon src={githubSvg} size={28} style={{ margin: '0 0 0 20px' }} />
     </a>
   </div>
 </div>
 
-**This header will contain a brief description of the project.**
+**Show admin-only content on authless React sites.**
 
-👁️ **[Live Demo](/ExampleComponent#example)**
+👁️ **[Live Demo](/demo)**
 
 ## Overview
 
-This section will contain an overview so people can have a high-level understanding of the project.
+This project features a simple, local-storage-based means of hiding nonsensitive admin-only content from non-admins on sites that lack user authentication.
+
+Some examples include Edit Content links at the end of posts, links to analytics, and links to other useful admin-only pages.
+
+Just wrap your admin-only content in an [AdminOnly](/AdminOnly) tag and reveal it with [ToggleAdmin](/ToggleAdmin) or [useAdmin](/useAdmin).
 
 ### Features include:
 
-- **🚀 List your features, use fun [emojis](https://emojipedia.org/search/?q=rocket)**
-  - Give a little more info on each feature or mention benefits.
+- **🎛️ Add admin-only controls to your authless site**
+  - Make life easier for admins without adding useless clutter for non-admins.
+- **🌞 Simplest solution**
+  - Hide nonsensitive admin content without the overkill of external auth dependency.
+- **🌐 Site-wide and persistent between sessions**
+  - One setting to affect the whole site. Uses local storage for persistence.
+- **🙈 Cater content to both non-admins and admins**
+  - Show and hide content from both types of users, simulating the feel of being logged in.
+- **📝 Netlify CMS button**
+  - Using Netlify CMS? A button is included to make linking to collections and entries easy.
+- **👩‍🎨 Admin role support**
+  - Show or hide content for different admin roles using custom local storage key names.
+- **✊ Do it your way**
+  - Activate via the included toggle button, or your own way using the included hook.
+
+## Why use this?
+
+Imagine you have a piece of content on a static [Jamstack](https://jamstack.org/) blog that has no user login system. You author the content yourself, maybe with [Netlify CMS](https://www.netlifycms.org/), in markdown and trigger a build and deploy on every publish.
+
+As an admin, you want to be able to easily edit this content without having to search for it manually either in GitHub or Netlify CMS. A server-based CMS like WordPress would show you an Edit Content button, but since our site has no concept of user auth, it has no idea you're an admin.
+
+You could integrate with an external auth system, but there's a much simpler way.
+
+With `react-authless-admin`, you can wrap your admin-only links in [AdminOnly](/AdminOnly) and they will show up site-wide when toggled by an [`AdminToggle`](/AdminToggle) or [useAdmin](/useAdmin). Similarly, you can wrap any content for non-admin users inside [NonAdminOnly](/NonAdminOnly).
+
+This allows you to easily control content that's useless to general users, but useful if you're an admin, without needing an auth integration. Check out the [demo](/demo) for an example.
 
 ## Installation
 
 ```
-npm i @devboldly/react-library-starter
+npm i react-authless-admin
 ```
 
 ## Quick Start
 
-This section will contain a copy/paste example so people can get started quickly.
+- Hide content from non-admins with [AdminOnly](/AdminOnly).
+- Hide content from admins with [NonAdminOnly](/NonAdminOnly).
+- Use an [AdminToggle](/AdminToggle) to switch admin on and off (or [useAdmin](/useAdmin) for more flexibility)
 
 ```jsx
-import { ExampleComponent } from '@devboldly/react-library-starter';
+import { AdminOnly, NonAdminOnly, AdminToggle } from 'react-authless-admin';
 ```
 
 ```jsx
-<ExampleComponent text="Example Component"/>
+<div><AdminToggle /></div>
+<AdminOnly>
+  <div>
+    This content is only visible when admin is <strong>enabled</strong>.
+  </div>
+</AdminOnly>
+<NonAdminOnly>
+  <div>
+    This content is only visible when admin is <strong>disabled</strong>.
+  </div>
+</NonAdminOnly>
 ```
+
+See the [demo](/demo) for an example of using a passcode to reveal admin-only components to manage a post.
 
 ## TypeScript
 
@@ -68,6 +110,6 @@ For major changes, open an issue first to discuss what you'd like to change.
 
 See the [library template](https://tinyurl.com/ya3k258d) for npm script documentation.
 
-## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-library-starter/stargazers)
+## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-authless-admin/stargazers)
 
-If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-library-starter/stargazers): [👉⭐](https://github.com/devboldly/react-library-starter/stargazers)
+If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-authless-admin/stargazers): [👉⭐](https://github.com/devboldly/react-authless-admin/stargazers)

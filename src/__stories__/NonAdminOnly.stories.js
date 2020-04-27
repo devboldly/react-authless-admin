@@ -1,5 +1,5 @@
 import React from 'react';
-import { useExample } from '../hooks/useExample';
+import { NonAdminOnly } from '../components/NonAdminOnly';
 
 // Learn how to write stories:
 // https://storybook.js.org/docs/basics/writing-stories/
@@ -9,18 +9,16 @@ import { useExample } from '../hooks/useExample';
 
 // The default export defines metadata that applies to the group.
 export default {
-  title: 'useExample Hook',
+  title: 'NonAdminOnly',
+  component: NonAdminOnly,
 };
 
 // The named exports define the stories
-
-// Needed to wrap the hook and give it visual representation.
-const HookComponent = () => {
-  useExample();
-  return <div>Add hook visual representation here.</div>;
-};
-
-export const ExampleStory = () => <HookComponent />;
-ExampleStory.story = {
-  name: 'Hook Visual',
+export const NonAdminOnlyStory = () => (
+  <div>
+    Content: <NonAdminOnly>This content only appears when admin is disabled.</NonAdminOnly>
+  </div>
+);
+NonAdminOnlyStory.story = {
+  name: 'NonAdminOnly',
 };

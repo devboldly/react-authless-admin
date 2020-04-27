@@ -1,0 +1,60 @@
+---
+name: AdminOnly
+menu: Components
+route: /AdminOnly
+---
+
+import { Playground, Props } from 'docz';
+import { AdminOnly } from './AdminOnly';
+import { AdminToggle } from './AdminToggle';
+
+<h1>AdminOnly</h1>
+
+## Description
+
+A component wrapper that hides children unless switched on site-wide by [AdminToggle](/AdminToggle) or [useAdmin](/useAdmin).
+
+This is for static sites that want to show components to admins ([nonsensitive only](#security-note)) but do not have user authentication to determine who is an admin or not.
+
+Anything wrapped in `AdminOnly` will be hidden unless admin is switched on.
+
+Things you hide should be:
+- Useless to general users, even if they had access to it (which they do)
+- Convenient for admins, such as direct links to edit content or other admin tools requiring a login
+
+> The content hidden should be useless to general users and convenient for admins.
+
+See [NonAdminOnly](/NonAdminOnly) to hide components when admin is switched on.
+
+## Usage
+
+<Playground>
+  <div>
+    <AdminToggle />
+  </div>
+  <AdminOnly>
+    <div style={{ border: 'solid 1px lightgray', padding: "10px", marginTop: "10px" }}>
+      <strong>This content is only visible when admin is enabled.</strong>
+    </div>
+  </AdminOnly>
+</Playground>
+
+<small>Note: You can edit the source above. Your changes will be rendered immediately.</small>
+
+## Props
+
+<Props of={AdminOnly} />
+
+> Note: Expand each prop for more information.
+
+## Security Note
+
+**Do not put anything sensitive inside an AdminOnly wrapper!** Since this is all done client-side, a savvy enough user has access to everything you put inside.
+
+You should only use this to hide things like links to pages elsewhere that require authentication. Examples include private repos, [Netlify CMS](/NetlifyCMSButton) admin pages, Google Analytics, deploys, or useful information that would be harmless for the general public to know.
+
+For example, an Edit Content button at the end of a blog post that takes someone directly to the authenticated edit page in Netlify CMS is very convenient for Netlify CMS admins but useless for everyone else.
+
+## Example
+
+See the [demo](/demo) for a full example.

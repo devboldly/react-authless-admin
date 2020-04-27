@@ -1,12 +1,12 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useExample } from '../hooks/useExample';
+import { useAdmin } from '../hooks/useAdmin';
 
 // Learn how to test React hooks:
 // https://react-hooks-testing-library.com/
 
-describe('useExample Hook', () => {
+describe('useNetlifyCMSAdminEnabled Hook', () => {
   test('should run without crashing', () => {
-    const { result } = renderHook(() => useExample('Example text'));
+    const { result } = renderHook(() => useAdmin());
     expect(result.error).toBe(undefined);
   });
 });
