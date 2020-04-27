@@ -2,7 +2,7 @@
   <a href="https://github.com/devboldly/react-authless-admin">React Authless Admin</a>
 </h2>
 <h3 align="center">
-  Show admin-only content on authless React sites.
+  Show admin-only content on React sites lacking user authentication.
 </h3>
 <p align="center">
   <a href="https://badge.fury.io/js/react-authless-admin">

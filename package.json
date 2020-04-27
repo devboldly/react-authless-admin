@@ -2,7 +2,7 @@
   "name": "react-authless-admin",
   "version": "1.0.2",
   "author": "Dev Boldly <devboldly@gmail.com>",
-  "description": "Show admin-only content on authless React sites.",
+  "description": "Show admin-only content on React sites lacking user authentication.",
   "homepage": "https://github.com/devboldly/react-authless-admin#readme",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -34,7 +34,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@devboldly/react-use-local-storage": "0.0.2"
+    "@devboldly/react-use-local-storage": "^1.0.4"
   },
   "peerDependencies": {
     "react": "^16.13.0",
