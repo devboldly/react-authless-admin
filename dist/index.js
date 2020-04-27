@@ -3,6 +3,8 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./components/NetlifyCMSButton"));
+__export(require("./components/AdminOnly"));
+__export(require("./components/NonAdminOnly"));
 __export(require("./components/AdminToggle"));
-__export(require("./hooks/useNetlifyCMSAdminEnabled"));
+__export(require("./components/NetlifyCMSButton"));
+__export(require("./hooks/useAdmin"));
