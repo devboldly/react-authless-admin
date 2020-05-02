@@ -88,12 +88,12 @@ const [isAdmin, setIsAdmin] = useAdmin();
 <button onClick={() => setIsAdmin(!isAdmin)}>{ isAdmin ? 'Switch Off' : 'Switch On' }</button>
 <AdminOnly>
   <div>
-    This content is only visible when admin is <strong>enabled</strong>.
+    This content is only visible when admin is enabled.
   </div>
 </AdminOnly>
 <NonAdminOnly>
   <div>
-    This content is only visible when admin is <strong>disabled</strong>.
+    This content is only visible when admin is disabled.
   </div>
 </NonAdminOnly>
 ```
