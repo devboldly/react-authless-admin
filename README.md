@@ -80,16 +80,14 @@ const [isAdmin, setIsAdmin] = useAdmin();
 ```jsx
 <button onClick={() => setIsAdmin(!isAdmin)}>{ isAdmin ? 'Switch Off' : 'Switch On' }</button>
 <AdminOnly>
-  <div>
-    This content is only visible when admin is enabled.
-  </div>
+  This content is only visible when admin is enabled.
 </AdminOnly>
 <NonAdminOnly>
-  <div>
-    This content is only visible when admin is disabled.
-  </div>
+  This content is only visible when admin is disabled.
 </NonAdminOnly>
 ```
+
+The above will show a button that toggles admin on and off, and will hide two piece of content.
 
 See the [demo](https://devboldly.github.io/react-authless-admin/demo) for an example of using a passcode to reveal admin-only components to manage a post.
 

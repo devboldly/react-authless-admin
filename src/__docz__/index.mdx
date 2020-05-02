@@ -87,14 +87,10 @@ const [isAdmin, setIsAdmin] = useAdmin();
 ```jsx
 <button onClick={() => setIsAdmin(!isAdmin)}>{ isAdmin ? 'Switch Off' : 'Switch On' }</button>
 <AdminOnly>
-  <div>
-    This content is only visible when admin is enabled.
-  </div>
+  This content is only visible when admin is enabled.
 </AdminOnly>
 <NonAdminOnly>
-  <div>
-    This content is only visible when admin is disabled.
-  </div>
+  This content is only visible when admin is disabled.
 </NonAdminOnly>
 ```
 
