@@ -34,7 +34,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@devboldly/react-use-local-storage": "^1.0.4"
+    "react-use-window-localstorage": "^1.0.5"
   },
   "peerDependencies": {
     "react": "^16.13.0",
