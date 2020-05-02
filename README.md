@@ -28,7 +28,7 @@ This project features a simple, local-storage-based means of hiding nonsensitive
 
 Some examples include Edit Content links at the end of posts, links to analytics, and links to other useful admin-only pages.
 
-Just wrap your admin-only content in an [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) tag and reveal it with [ToggleAdmin](https://devboldly.github.io/react-authless-admin/ToggleAdmin) or [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
+Just wrap your admin-only content in an [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) tag and reveal it with [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
 
 ### Features include:
 
