@@ -1,4 +1,4 @@
-import { useLocalStorageBoolean, LocalStorageItem } from '@devboldly/react-use-local-storage';
+import { useLocalStorageBoolean, LocalStorageItem } from 'react-use-window-localstorage';
 
 /**
  *
