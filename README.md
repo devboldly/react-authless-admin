@@ -20,6 +20,8 @@
 
 Read the **[official documentation](https://devboldly.github.io/react-authless-admin/)**.
 
+[![Demo](./src/__docz__/images/demo.gif "Demo")](https://devboldly.github.io/react-authless-admin/)
+
 👁️ **[Live Demo](https://devboldly.github.io/react-authless-admin/demo)**
 
 ## Overview
