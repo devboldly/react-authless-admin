@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_use_window_localstorage_1 = require("react-use-window-localstorage");
 /**
  *
- * See documentation: https://devboldly.github.io/react-authless-admin/useAdmin
+ * See documentation: [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin)
  *
  * This hook can be used to enable or disable admin-only components on a static site that lacks user authentication.
  *

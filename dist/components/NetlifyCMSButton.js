@@ -31,7 +31,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 /**
- * See documentation: https://devboldly.github.io/react-authless-admin/NetlifyCMSButton
+ * See documentation: [NetlifyCMSButton](https://devboldly.github.io/react-authless-admin/NetlifyCMSButton)
  *
  * A button that takes you to a specific entry or collection in [Netlify CMS](https://www.netlifycms.org/).
  *

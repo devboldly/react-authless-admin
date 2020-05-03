@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var useAdmin_1 = require("../hooks/useAdmin");
 /**
- * See documentation: https://devboldly.github.io/react-authless-admin/NonAdminOnly
+ * See documentation: [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly)
  *
  * A component wrapper that shows children to non-admins unless switched off site-wide by the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin).
  *
