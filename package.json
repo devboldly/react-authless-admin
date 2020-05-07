@@ -35,7 +35,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "react-use-window-localstorage": "^1.0.9"
+    "react-use-window-localstorage": "^1.0.12"
   },
   "peerDependencies": {
     "react": "^16.13.0",

@@ -15,6 +15,7 @@ export default {
 // The named exports define the stories
 export const KitchenSinkStory = () => {
   const [isAdmin, setIsAdmin] = useAdmin();
+  console.log('top level isAdmin', isAdmin);
   return (
     <div>
       <div>
