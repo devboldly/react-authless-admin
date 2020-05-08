@@ -28,6 +28,10 @@ export const KitchenSinkStory = () => {
             <NetlifyCMSButton collection="posts" entry="hello-world" openInNewWindow>
               ✏️ Edit Content
             </NetlifyCMSButton>
+            <NetlifyCMSButton collection="posts" openInNewWindow>
+              All Posts
+            </NetlifyCMSButton>
+            <NetlifyCMSButton openInNewWindow>Admin</NetlifyCMSButton>
           </div>
         </AdminOnly>
       </div>

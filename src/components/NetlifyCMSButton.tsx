@@ -34,11 +34,11 @@ export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
   // If not manually specified with href, build the link to the content,
   // linking as deep as we can given the props provided
   if (typeof href === 'undefined') {
-    href = `${props.adminRootPath}/#/collections/`;
+    href = `${props.adminRootPath}/#/`;
     if (props.collection) {
-      href += `${encodeURIComponent(props.collection)}/entries/`;
+      href += `collections/${encodeURIComponent(props.collection)}/`;
       if (props.entry) {
-        href += `${encodeURIComponent(props.entry)}`;
+        href += `entries/${encodeURIComponent(props.entry)}`;
       }
     }
   }
