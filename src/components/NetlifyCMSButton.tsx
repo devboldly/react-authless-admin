@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 export interface NetlifyCMSButtonProps {
   /** The name of the collection in Netlify CMS, such as `posts` or `pages`. Will be URI encoded. */
@@ -20,20 +20,20 @@ export interface NetlifyCMSButtonProps {
 }
 
 /**
- * See documentation: [NetlifyCMSButton](https://devboldly.github.io/react-authless-admin/NetlifyCMSButton)
+ * See documentation: [NetlifyCMSButton](https://justinmahar.github.io/react-authless-admin/NetlifyCMSButton)
  *
  * A button that takes you to a specific entry or collection in [Netlify CMS](https://www.netlifycms.org/).
  *
  * The button should be given the `collection` name and `entry` name for the Netlify CMS admin page you'd like the button to visit. You can also give it an `href` to manually specify the destination.
  *
- * For static sites that use Netlify CMS but do not have user authentication, place the button inside an [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) and use the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin) to make it visible for admins.
+ * For static sites that use Netlify CMS but do not have user authentication, place the button inside an [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly) and use the [useAdmin hook](https://justinmahar.github.io/react-authless-admin/useAdmin) to make it visible for admins.
  */
 export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
   let href = props.href;
 
   // If not manually specified with href, build the link to the content,
   // linking as deep as we can given the props provided
-  if (typeof href === 'undefined') {
+  if (typeof href === "undefined") {
     href = `${props.adminRootPath}/#/`;
     if (props.collection) {
       href += `collections/${encodeURIComponent(props.collection)}/`;
@@ -43,7 +43,9 @@ export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
     }
   }
 
-  const linkProps = props.openInNewWindow ? { target: '_blank', rel: 'noopener noreferrer' } : undefined;
+  const linkProps = props.openInNewWindow
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : undefined;
   const Button = props.component;
   return (
     <a href={href} {...linkProps}>
@@ -54,8 +56,10 @@ export function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element {
 
 NetlifyCMSButton.defaultProps = {
   alwaysVisible: false,
-  adminRootPath: '/admin',
-  component: ({ children, ...rest }: { [x: string]: any }) => <button {...rest}>{children}</button>,
-  componentProps: { title: 'Edit' },
-  children: 'Edit',
+  adminRootPath: "/admin",
+  component: ({ children, ...rest }: { [x: string]: any }) => (
+    <button {...rest}>{children}</button>
+  ),
+  componentProps: { title: "Edit" },
+  children: "Edit",
 };

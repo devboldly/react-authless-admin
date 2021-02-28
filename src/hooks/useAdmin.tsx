@@ -1,8 +1,11 @@
-import { useLocalStorageBoolean, LocalStorageItem } from 'react-use-window-localstorage';
+import {
+  useLocalStorageBoolean,
+  LocalStorageItem,
+} from "react-use-window-localstorage";
 
 /**
  *
- * See documentation: [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin)
+ * See documentation: [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin)
  *
  * This hook can be used to enable or disable admin-only components on a static site that lacks user authentication.
  *
@@ -12,9 +15,13 @@ import { useLocalStorageBoolean, LocalStorageItem } from 'react-use-window-local
  *
  * @param localStorageKeyName Optional. The [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) key name for the admin boolean. Defaults to `react-authless-admin`
  */
-export function useAdmin(localStorageKeyName?: string): LocalStorageItem<boolean> {
+export function useAdmin(
+  localStorageKeyName?: string
+): LocalStorageItem<boolean> {
   const val = useLocalStorageBoolean(
-    typeof localStorageKeyName === 'string' ? localStorageKeyName : 'react-authless-admin',
+    typeof localStorageKeyName === "string"
+      ? localStorageKeyName
+      : "react-authless-admin",
     false
   );
   return val;

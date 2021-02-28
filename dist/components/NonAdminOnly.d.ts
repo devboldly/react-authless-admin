@@ -8,14 +8,14 @@ export interface NonAdminOnlyProps {
     localStorageKeyName?: string;
 }
 /**
- * See documentation: [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly)
+ * See documentation: [NonAdminOnly](https://justinmahar.github.io/react-authless-admin/NonAdminOnly)
  *
- * A component wrapper that shows children to non-admins unless switched off site-wide by the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin).
+ * A component wrapper that shows children to non-admins unless switched off site-wide by the [useAdmin hook](https://justinmahar.github.io/react-authless-admin/useAdmin).
  *
  * This is for static sites that want to show components for non-admins (and hide for admins) but do not have user authentication.
  *
  * Anything wrapped in `NonAdminOnly` will be hidden when admin is switched on.
  *
- * See [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) to hide components when admin is switched off.
+ * See [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly) to hide components when admin is switched off.
  */
 export declare function NonAdminOnly(props: NonAdminOnlyProps): JSX.Element;

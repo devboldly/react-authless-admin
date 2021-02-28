@@ -18,13 +18,13 @@ export interface NetlifyCMSButtonProps {
     openInNewWindow?: boolean;
 }
 /**
- * See documentation: [NetlifyCMSButton](https://devboldly.github.io/react-authless-admin/NetlifyCMSButton)
+ * See documentation: [NetlifyCMSButton](https://justinmahar.github.io/react-authless-admin/NetlifyCMSButton)
  *
  * A button that takes you to a specific entry or collection in [Netlify CMS](https://www.netlifycms.org/).
  *
  * The button should be given the `collection` name and `entry` name for the Netlify CMS admin page you'd like the button to visit. You can also give it an `href` to manually specify the destination.
  *
- * For static sites that use Netlify CMS but do not have user authentication, place the button inside an [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) and use the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin) to make it visible for admins.
+ * For static sites that use Netlify CMS but do not have user authentication, place the button inside an [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly) and use the [useAdmin hook](https://justinmahar.github.io/react-authless-admin/useAdmin) to make it visible for admins.
  */
 export declare function NetlifyCMSButton(props: NetlifyCMSButtonProps): JSX.Element;
 export declare namespace NetlifyCMSButton {

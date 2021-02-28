@@ -1,5 +1,5 @@
 <h2 align="center">
-  <a href="https://github.com/devboldly/react-authless-admin">React Authless Admin</a>
+  <a href="https://github.com/justinmahar/react-authless-admin">React Authless Admin</a>
 </h2>
 <h3 align="center">
   Show admin-only content on React sites lacking user authentication.
@@ -8,21 +8,21 @@
   <a href="https://badge.fury.io/js/react-authless-admin">
     <img src="https://badge.fury.io/js/react-authless-admin.svg" alt="npm Version"/>
   </a>
-  <a href="https://github.com/devboldly/react-authless-admin/actions?query=workflow%3ATests">
-    <img src="https://github.com/devboldly/react-authless-admin/workflows/Tests/badge.svg" alt="Tests Status"/>
+  <a href="https://github.com/justinmahar/react-authless-admin/actions?query=workflow%3ATests">
+    <img src="https://github.com/justinmahar/react-authless-admin/workflows/Tests/badge.svg" alt="Tests Status"/>
   </a>
-  <a href="https://github.com/devboldly/react-authless-admin/actions?query=workflow%3ADeploy">
-    <img src="https://github.com/devboldly/react-authless-admin/workflows/Deploy/badge.svg" alt="Deploy Status"/>
+  <a href="https://github.com/justinmahar/react-authless-admin/actions?query=workflow%3ADeploy">
+    <img src="https://github.com/justinmahar/react-authless-admin/workflows/Deploy/badge.svg" alt="Deploy Status"/>
   </a>
 </p>
 
 ## Documentation
 
-Read the **[official documentation](https://devboldly.github.io/react-authless-admin/)**.
+Read the **[official documentation](https://justinmahar.github.io/react-authless-admin/)**.
 
-[![Demo](./src/__docz__/images/demo.gif "Demo")](https://devboldly.github.io/react-authless-admin/demo)
+[![Demo](./src/__docz__/images/demo.gif "Demo")](https://justinmahar.github.io/react-authless-admin/demo)
 
-👁️ **[Live Demo](https://devboldly.github.io/react-authless-admin/demo)**
+👁️ **[Live Demo](https://justinmahar.github.io/react-authless-admin/demo)**
 
 ## Overview
 
@@ -30,7 +30,7 @@ This project features a simple, local-storage-based means of hiding nonsensitive
 
 Some examples include Edit Content links at the end of posts, links to analytics, and links to other useful admin-only pages.
 
-Just wrap your admin-only content in an [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) tag and reveal it with [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
+Just wrap your admin-only content in an [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly) tag and reveal it with [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin).
 
 ### Features include:
 
@@ -55,9 +55,9 @@ As an admin, when viewing your site you want to be able to easily edit this cont
 
 You could integrate with an external auth system, but there's a much simpler way.
 
-With `react-authless-admin`, you can wrap your admin-only links in [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly) and they will show up site-wide when toggled by [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin). Similarly, you can wrap any content for non-admin users inside [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly).
+With `react-authless-admin`, you can wrap your admin-only links in [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly) and they will show up site-wide when toggled by [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin). Similarly, you can wrap any content for non-admin users inside [NonAdminOnly](https://justinmahar.github.io/react-authless-admin/NonAdminOnly).
 
-This allows you to easily control content that's useless to general users, but useful if you're an admin, without needing an auth integration. Check out the [demo](https://devboldly.github.io/react-authless-admin/demo) for an example.
+This allows you to easily control content that's useless to general users, but useful if you're an admin, without needing an auth integration. Check out the [demo](https://justinmahar.github.io/react-authless-admin/demo) for an example.
 
 ## Installation
 
@@ -67,12 +67,12 @@ npm i react-authless-admin
 
 ## Quick Start
 
-- Hide content from non-admins with [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly).
-- Hide content from admins with [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly).
-- Use the [useAdmin hook](https://devboldly.github.io/react-authless-admin/useAdmin) to switch admin on and off.
+- Hide content from non-admins with [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly).
+- Hide content from admins with [NonAdminOnly](https://justinmahar.github.io/react-authless-admin/NonAdminOnly).
+- Use the [useAdmin hook](https://justinmahar.github.io/react-authless-admin/useAdmin) to switch admin on and off.
 
 ```jsx
-import { AdminOnly, NonAdminOnly, useAdmin } from 'react-authless-admin';
+import { AdminOnly, NonAdminOnly, useAdmin } from "react-authless-admin";
 ```
 
 ```jsx
@@ -91,7 +91,7 @@ const [isAdmin, setIsAdmin] = useAdmin();
 
 The above will show a button that toggles admin on and off, and will toggle two elements on the page.
 
-See the [demo](https://devboldly.github.io/react-authless-admin/demo) for an example of using a passcode to reveal admin-only components to manage a post.
+See the [demo](https://justinmahar.github.io/react-authless-admin/demo) for an example of using a passcode to reveal admin-only components to manage a post.
 
 ## TypeScript
 
@@ -111,14 +111,14 @@ For major changes, open an issue first to discuss what you'd like to change.
 
 See [Kindling](https://tinyurl.com/kindlingscripts) for npm script documentation.
 
-## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-authless-admin/stargazers)
+## ⭐ Found It Helpful? [Star It!](https://github.com/justinmahar/react-authless-admin/stargazers)
 
-If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-authless-admin/stargazers): [👉⭐](https://github.com/devboldly/react-authless-admin/stargazers)
+If you found this project helpful, let the community know by giving it a [star](https://github.com/justinmahar/react-authless-admin/stargazers): [👉⭐](https://github.com/justinmahar/react-authless-admin/stargazers)
 
 ## MIT License
 
 ```
-Copyright © 2020 DevBoldly https://devboldly.com
+Copyright © 2020 Justin Mahar https://github.com/justinmahar
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

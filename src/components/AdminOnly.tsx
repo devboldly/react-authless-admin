@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { useAdmin } from '../hooks/useAdmin';
+import * as React from "react";
+import { useAdmin } from "../hooks/useAdmin";
 
 export interface AdminOnlyProps {
   /** Children that will only be visible when admin is enabled (via
-   * [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin)).
+   * [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin)).
    */
   children?: React.ReactNode;
   /** Optional. Set to `true` to always render this component's children regardless of whether admin is enabled. */
@@ -13,11 +13,11 @@ export interface AdminOnlyProps {
 }
 
 /**
- * See documentation: [AdminOnly](https://devboldly.github.io/react-authless-admin/AdminOnly)
+ * See documentation: [AdminOnly](https://justinmahar.github.io/react-authless-admin/AdminOnly)
  *
- * A component wrapper that hides children unless switched on site-wide by [useAdmin](https://devboldly.github.io/react-authless-admin/useAdmin).
+ * A component wrapper that hides children unless switched on site-wide by [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin).
  *
- * This is for static sites that want to show components to admins ([nonsensitive only](https://devboldly.github.io/react-authless-admin/AdminOnly#security-note)) but do not have user authentication to determine who is an admin or not.
+ * This is for static sites that want to show components to admins ([nonsensitive only](https://justinmahar.github.io/react-authless-admin/AdminOnly#security-note)) but do not have user authentication to determine who is an admin or not.
  *
  * Anything wrapped in `AdminOnly` will be hidden unless admin is switched on.
  *
@@ -27,7 +27,7 @@ export interface AdminOnlyProps {
  *
  * > The content hidden should be useless to general users and convenient for admins.
  *
- * See [NonAdminOnly](https://devboldly.github.io/react-authless-admin/NonAdminOnly) to hide components when admin is switched on.
+ * See [NonAdminOnly](https://justinmahar.github.io/react-authless-admin/NonAdminOnly) to hide components when admin is switched on.
  */
 export function AdminOnly(props: AdminOnlyProps): JSX.Element {
   const [isAdminEnabled] = useAdmin(props.localStorageKeyName);
