@@ -56,7 +56,7 @@ function NetlifyCMSButton(props) {
     var href = props.href;
     // If not manually specified with href, build the link to the content,
     // linking as deep as we can given the props provided
-    if (typeof href === "undefined") {
+    if (typeof href === 'undefined') {
         href = props.adminRootPath + "/#/";
         if (props.collection) {
             href += "collections/" + encodeURIComponent(props.collection) + "/";
@@ -65,9 +65,7 @@ function NetlifyCMSButton(props) {
             }
         }
     }
-    var linkProps = props.openInNewWindow
-        ? { target: "_blank", rel: "noopener noreferrer" }
-        : undefined;
+    var linkProps = props.openInNewWindow ? { target: '_blank', rel: 'noopener noreferrer' } : undefined;
     var Button = props.component;
     return (React.createElement("a", __assign({ href: href }, linkProps),
         React.createElement(Button, __assign({}, props.componentProps), props.children)));
@@ -75,11 +73,11 @@ function NetlifyCMSButton(props) {
 exports.NetlifyCMSButton = NetlifyCMSButton;
 NetlifyCMSButton.defaultProps = {
     alwaysVisible: false,
-    adminRootPath: "/admin",
+    adminRootPath: '/admin',
     component: function (_a) {
         var children = _a.children, rest = __rest(_a, ["children"]);
-        return (React.createElement("button", __assign({}, rest), children));
+        return React.createElement("button", __assign({}, rest), children);
     },
-    componentProps: { title: "Edit" },
-    children: "Edit",
+    componentProps: { title: 'Edit' },
+    children: 'Edit',
 };

@@ -1,4 +1,4 @@
-import { LocalStorageItem } from "react-use-window-localstorage";
+import { LocalStorageItem } from 'react-use-window-localstorage';
 /**
  *
  * See documentation: [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin)

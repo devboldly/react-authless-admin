@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 export interface NonAdminOnlyProps {
     /** Children that will only be visible when admin is disabled. */
     children?: React.ReactNode;
