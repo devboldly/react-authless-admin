@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 export interface NetlifyCMSButtonProps {
     /** The name of the collection in Netlify CMS, such as `posts` or `pages`. Will be URI encoded. */
     collection?: string;

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 export interface AdminOnlyProps {
     /** Children that will only be visible when admin is enabled (via
      * [useAdmin](https://justinmahar.github.io/react-authless-admin/useAdmin)).

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.useAdmin = void 0;
 var react_use_window_localstorage_1 = require("react-use-window-localstorage");
 /**
  *
@@ -14,12 +15,9 @@ var react_use_window_localstorage_1 = require("react-use-window-localstorage");
  * @param localStorageKeyName Optional. The [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) key name for the admin boolean. Defaults to `react-authless-admin`
  */
 function useAdmin(localStorageKeyName) {
-  var val = react_use_window_localstorage_1.useLocalStorageBoolean(
-    typeof localStorageKeyName === "string"
-      ? localStorageKeyName
-      : "react-authless-admin",
-    false
-  );
-  return val;
+    var val = react_use_window_localstorage_1.useLocalStorageBoolean(typeof localStorageKeyName === "string"
+        ? localStorageKeyName
+        : "react-authless-admin", false);
+    return val;
 }
 exports.useAdmin = useAdmin;
